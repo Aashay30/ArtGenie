@@ -76,7 +76,7 @@ const loginUser = async (req, res) => {
 
 const userCredits = async (req, res) => {
   try {
-    const { userId } = req.body;
+    const { userId } = req.body; // getting userId from auth middleware
 
     const user = await userModel.findById(userId);
     res.json({
