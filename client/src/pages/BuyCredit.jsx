@@ -7,7 +7,8 @@ import { toast } from "react-toastify";
 import axios from "axios";
 
 const BuyCredit = () => {
-  const { user, backendUrl, loadCreditsData, token, setShowLogin} = useContext(AppContext);
+  const { user, backendUrl, loadCreditsData, token, setShowLogin } =
+    useContext(AppContext);
 
   const navigate = useNavigate();
 
@@ -21,27 +22,44 @@ const BuyCredit = () => {
       order_id: order.id,
       receipt: order.receipt,
       handler: async (response) => {
-        console.log(response);
-      }
+        try {
+          const { data } = await axios.post(
+            backendUrl + "/api/user/verify-razor",
+            { response },
+            { headers: { token } }
+          );
+
+          if(data.success){
+            loadCreditsData();
+            navigate("/");
+            toast.success("Payment Success Credits Added");
+          }
+
+        } catch (error) {
+          toast.error(error.message);
+        }
+      },
     };
     const rzp = new window.Razorpay(options);
     rzp.open();
-  }
+  };
 
   const paymentRazorpay = async (planId) => {
-    try{
-      if(!user){
+    try {
+      if (!user) {
         setShowLogin(true);
       }
 
-      const {data} = await axios.post(backendUrl + "/api/user/pay-razor", {planId}, {headers: {token}});
+      const { data } = await axios.post(
+        backendUrl + "/api/user/pay-razor",
+        { planId },
+        { headers: { token } }
+      );
 
-      if(data.success){
+      if (data.success) {
         initPay(data.order);
       }
-
-    }
-    catch(error){
+    } catch (error) {
       toast.error(error.message);
     }
   };
@@ -73,7 +91,10 @@ const BuyCredit = () => {
               <span className="text-3xl font-medium">${item.price}</span>/
               {item.credits} credits
             </p>
-            <button onClick={()=>paymentRazorpay(item.id)} className="w-full bg-gray-800 text-white mt-8 text-sm rounded-md py-2.5 min-w-52">
+            <button
+              onClick={() => paymentRazorpay(item.id)}
+              className="w-full bg-gray-800 text-white mt-8 text-sm rounded-md py-2.5 min-w-52"
+            >
               {user ? "Purchase" : "Get Started"}
             </button>
           </div>
