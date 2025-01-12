@@ -38,7 +38,7 @@ Welcome to **Art Genie**, the ultimate web application where you can create brea
 - MongoDB + Mongoose  
 
 **Other Tools**:  
-- Google Gemini for AI-generated images  
+- Clipdrop API for AI-generated images  
 - Razorpay for payments  
 - JWT and bcrypt for authentication  
 
