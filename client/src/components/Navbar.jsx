@@ -23,7 +23,7 @@ const Navbar = () => {
             >
               <img className="w-5" src={assets.credit_star} alt="" />
               <p className="text-sm sm:text-sm font-medium text-gray-600">
-                Credit left: {credit}
+                Credit left: 5
               </p>
             </button>
             <p className="text-gray-600 max-sm:hidden pl-4">Hi, {user.name}</p>
