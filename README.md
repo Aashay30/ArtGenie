@@ -112,6 +112,61 @@ Create more art seamlessly with the “Generate Another” option.
 
 ## 📦 Installation  
 
+## Project Structure
+
+```
+artgenie/
+├── client/
+│   ├── .env
+│   ├── .gitignore
+│   ├── eslint.config.js
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── tailwind.config.js
+│   ├── vite.config.js
+│   ├── index.html
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   ├── index.css
+│   │   ├── assets/
+│   │   │   └── assets.js
+│   │   ├── components/
+│   │   │   ├── Description.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   ├── GenerateButton.jsx
+│   │   │   ├── Header.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Steps.jsx
+│   │   │   └── Testimonial.jsx
+│   │   ├── context/
+│   │   │   └── AppContext.jsx
+│   │   ├── pages/
+│   │   │   ├── BuyCredit.jsx
+│   │   │   ├── Home.jsx
+│   │   │   └── Result.jsx
+│   │   └── ...
+├── server/
+│   ├── .env
+│   ├── package.json
+│   ├── server.js
+│   ├── config/
+│   │   └── mongodb.js
+│   ├── controllers/
+│   │   ├── imageController.js
+│   │   └── userController.js
+│   ├── middlewares/
+│   │   └── auth.js
+│   ├── models/
+│   │   ├── transactionModel.js
+│   │   └── userModel.js
+│   ├── routes/
+│   │   ├── imageRoutes.js
+│   │   └── userRoutes.js
+│   └── ...
+```
+
 Clone the repository and install dependencies:  
 
 ```bash
