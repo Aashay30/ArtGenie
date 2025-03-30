@@ -188,4 +188,63 @@ npm start
 cd client  
 npm install  
 npm start  
+```
+
+---
+
+# Key Features
+
+## API Integrations
+- **Clipdrop API 🎨:** Integrated for AI-powered image generation from text prompts.
+- **Razorpay 💳:** Seamlessly handles secure credit purchases and payment transactions.
+
+## Authentication Flow
+- **JWT-Based Token System 🔑:** Implements secure authentication using JWT for session management.
+- **Password Security 🛡️:** Utilizes bcrypt for hashing and securing user passwords.
+
+## State Management
+- **React Context API 🔄:** Manages global state efficiently, ensuring smooth data flow across the application.
+
+## Database Structure
+- **MongoDB Collections 🗃️:** 
+  - **Users Collection 👤:** Stores user credentials and profile details.
+  - **Transactions Collection 💰:** Logs payment history and credit purchases.
+  - **Art Generation Logs 📝:** Maintains records of generated images and text prompts.
+
+## 🏗️ System Architecture
+- **Frontend**: React.js ⚛️, Tailwind CSS 🎨, Framer Motion ✨
+- **Backend**: Node.js & Express.js 🚀
+- **Database**: MongoDB 🗄️
+- **Payment Gateway**: Razorpay 💳
+- **Authentication**: JWT and bcrypt 🔑🛡️
+- **AI Integration**: Clipdrop API for text-to-image generation 🤖🎨
+
+## 📖 API Documentation
+
+### User Routes
+- `POST /api/v1/users/register` ✍️: Register a new user.
+- `POST /api/v1/users/login` 🔑: Authenticate a user and return a JWT.
+
+### Image Routes
+- `POST /api/v1/images/generate` 🎨: Generate an AI image from a text prompt.
+- `GET /api/v1/images/:id` 📷: Retrieve details of a generated image.
+
+## 🧠 Challenges and Solutions
+- **Challenge**: Integrating Razorpay for seamless payments 💳.
+  - **Solution**: Used Razorpay's Node.js SDK and implemented secure server-side payment verification 🔒.
+- **Challenge**: Optimizing AI image generation for performance 🚀.
+  - **Solution**: Implemented asynchronous processing and loading animations using Framer Motion ⏳✨.
+ 
+## 🔮 Future Enhancements
+- Add support for multiple languages in text prompts 🌐.
+- Implement user profiles with saved artwork 👤🖼️.
+- Introduce social sharing features for generated images 📲.
+
+## 🛠️ Skills Demonstrated
+- Full-stack development with the MERN stack ⚛️🌐.
+- API integration and payment gateway implementation 🔌💳.
+- Responsive UI design with Tailwind CSS 📱🎨.
+- State management using React Context API 🔄.
+- Authentication and security with JWT and bcrypt 🔑🛡️.
+
 
