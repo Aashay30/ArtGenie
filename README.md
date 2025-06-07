@@ -231,7 +231,7 @@ npm start
 
 ---
 
-## 🚧 Challenges & Problems Faced During Art Genie Development (Interview-Focused STAR Format)
+## 🚧 Challenges & Problems Faced During Art Genie Development (STAR Format)
 
 ---
 
